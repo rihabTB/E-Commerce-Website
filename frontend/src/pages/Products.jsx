@@ -11,6 +11,8 @@ export default function Products() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
+  console.log("PRODUCTS DATA:", products);
+
   useEffect(() => {
     API.get("/products")
       .then(res => {
