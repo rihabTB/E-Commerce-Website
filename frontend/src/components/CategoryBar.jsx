@@ -42,8 +42,6 @@ export default function CategoryBar({ selectedCategory, setSelectedCategory }) {
             <img src={cat.icon} alt={cat.name} className="category-icon" />
           )}
 
-          {/* Optional: remove this if you want icons only */}
-          {/* <span>{cat.name}</span> */}
         </div>
       ))}
     </div>
