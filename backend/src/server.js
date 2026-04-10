@@ -17,7 +17,15 @@ dotenv.config({ path: path.join(__dirname, "../.env") });
 
 const app = express();
 
-app.use(cors({ origin: "http://localhost:5173" }));
+//app.use(cors({ origin: "http://localhost:5173" }));
+app.use(cors({
+  origin: [
+    "http://localhost:5173",
+    "https://e-commerce-website-mu-ten-62.vercel.app"
+  ],
+  credentials: true
+}));
+
 app.use(express.json());
 app.use("/uploads", express.static(path.join(__dirname, "../uploads")));
 
