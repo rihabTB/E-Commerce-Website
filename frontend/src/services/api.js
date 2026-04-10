@@ -4,7 +4,8 @@ export const API_ORIGIN = "http://localhost:5000";
 
 const API = axios.create({
   //baseURL: `${API_ORIGIN}/api`
-  baseURL: import.meta.env.VITE_API_URL
+  //baseURL: import.meta.env.VITE_API_URL
+  baseURL: "https://e-commerce-website-mc0j.onrender.com/api"
 
 });
 
