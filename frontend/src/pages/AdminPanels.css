@@ -1,0 +1,140 @@
+.admin-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  min-height: 100vh;
+  background: transparent;
+  color: #fff;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.admin-page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.admin-page-subtitle {
+  margin-top: 8px;
+  color: #f3caca;
+  font-size: 0.95rem;
+}
+
+.admin-panel {
+  background: #640a0c;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+  margin-bottom: 20px;
+}
+
+.admin-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+.admin-input,
+.admin-textarea,
+.admin-select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #8f2d30;
+  border-radius: 8px;
+  background: #fff;
+  color: #2d0203;
+  font-size: 14px;
+}
+
+.admin-textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.admin-actions-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+/*order card view*/
+.admin-shell  {
+  background: #640a0c;
+}
+.action-card{
+  background-color: #4a0b0e;     
+}
+.admin-table-wrap {
+  overflow-x: auto;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  color: #2d0203;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.admin-table th,
+.admin-table td {
+  padding: 12px;
+  border-bottom: 1px solid #f1dddd;
+  text-align: left;
+}
+
+.admin-table th {
+  background: #f5d7d7;
+  font-weight: 700;
+}
+
+.btn-secondary {
+  background: #f4d6d7;
+  color: #4a0b0e;
+}
+
+.btn-danger {
+  background: #b22228;
+  color: #fff;
+}
+
+.chip {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.chip-active {
+  background: #e6f7ea;
+  color: #1b6d2f;
+}
+
+.chip-blocked {
+  background: #fce7e8;
+  color: #9f1c21;
+}
+
+.chip-pending {
+  background: #fff4d8;
+  color: #7a5400;
+}
+
+.chip-processing {
+  background: #e3f2ff;
+  color: #0d4f7f;
+}
+
+.chip-delivered {
+  background: #e6f7ea;
+  color: #1b6d2f;
+}
+
+.chip-cancelled {
+  background: #fce7e8;
+  color: #9f1c21;
+}
