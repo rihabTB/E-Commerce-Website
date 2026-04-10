@@ -17,7 +17,7 @@ export default function Products() {
     API.get("/products")
       .then(res => {
         console.log("API RESPONSE:", res.data);
-        setProducts(res.data);
+        setProducts(res.data.products || res.data); //
         setLoading(false);
       })
       .catch(err => {
@@ -27,10 +27,11 @@ export default function Products() {
   }, []);
 
   //filtering 
+  const safeProducts = Array.isArray(products) ? products : [];
   const filteredProducts =
     selectedCategory === "All"
-      ? products
-      : products.filter(p => p.category === selectedCategory);
+      ? safeProducts
+      : safeProducts.filter(p => p.category === selectedCategory);
 
   if (loading) return <p style={{ textAlign: "center" }}>Loading products...</p>;
   if (error) return <p style={{ textAlign: "center", color: "red" }}>Error: {error}</p>;
