@@ -16,6 +16,7 @@ export default function Products() {
   useEffect(() => {
     API.get("/products")
       .then(res => {
+        console.log("API RESPONSE:", res.data);
         setProducts(res.data);
         setLoading(false);
       })
