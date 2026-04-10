@@ -3,10 +3,11 @@ import axios from "axios";
 export const API_ORIGIN = "http://localhost:5000";
 
 const API = axios.create({
-  baseURL: `${API_ORIGIN}/api`
+  //baseURL: `${API_ORIGIN}/api`
+  baseURL: import.meta.env.VITE_API_URL
+
 });
 
-// 🔥 ALWAYS attach admin key
 API.interceptors.request.use((config) => {
   config.headers = config.headers || {};
   config.headers["x-admin-key"] = import.meta.env.VITE_ADMIN_KEY;
